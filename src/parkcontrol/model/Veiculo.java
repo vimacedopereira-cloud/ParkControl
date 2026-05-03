@@ -3,17 +3,17 @@ package parkcontrol.model;
 public abstract class Veiculo {
     private String placa;
     private String modelo;
-    private int horaEntrada;
+    private double horaEntrada; 
 
-    public Veiculo(String placa, String modelo, int horaEntrada) {
+    public Veiculo(String placa, String modelo, double horaEntrada) {
         this.placa = placa;
         this.modelo = modelo;
         this.horaEntrada = horaEntrada;
     }
 
-    public abstract double calcularTarifa(int horaSaida);
+    public abstract double calcularTarifa(double horaSaida);
 
     public String getPlaca() { return placa; }
     public String getModelo() { return modelo; }
-    public int getHoraEntrada() { return horaEntrada; }
+    public double getHoraEntrada() { return horaEntrada; }
 }
