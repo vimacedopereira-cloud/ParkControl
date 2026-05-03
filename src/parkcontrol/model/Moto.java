@@ -1,11 +1,16 @@
 package parkcontrol.model;
 
 public class Moto extends Veiculo {
-    public Moto(String placa, String modelo, int horaEntrada) {
+    
+    
+    public Moto(String placa, String modelo, double horaEntrada) {
         super(placa, modelo, horaEntrada);
     }
-    public double calcularTarifa(int horaSaida) {
-        int tempo = horaSaida - getHoraEntrada();
-        return tempo * 5.0; 
+
+    public double calcularTarifa(double horaSaidaEmMinutos) {
+        
+        double minutosDecorridos = horaSaidaEmMinutos - getHoraEntrada();   
+        double horasTotal = minutosDecorridos / 60.0;
+        return horasTotal * 5.0; 
     }
 }
